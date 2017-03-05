@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		13F16B731E6BEE1900E30FE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F16B721E6BEE1900E30FE9 /* AppDelegate.swift */; };
-		13F16B751E6BEE1900E30FE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F16B741E6BEE1900E30FE9 /* ViewController.swift */; };
 		13F16B781E6BEE1900E30FE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F16B761E6BEE1900E30FE9 /* Main.storyboard */; };
 		13F16B7A1E6BEE1900E30FE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F16B791E6BEE1900E30FE9 /* Assets.xcassets */; };
 		13F16B7D1E6BEE1900E30FE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F16B7B1E6BEE1900E30FE9 /* LaunchScreen.storyboard */; };
+		13F16B851E6CB91F00E30FE9 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F16B841E6CB91F00E30FE9 /* LogInViewController.swift */; };
 		E444F650AF936AD77E2A7DB1 /* Pods_InstagramOnParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9619A71B96DF341098479D7 /* Pods_InstagramOnParse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13F16B6F1E6BEE1900E30FE9 /* InstagramOnParse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramOnParse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F16B721E6BEE1900E30FE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13F16B741E6BEE1900E30FE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		13F16B771E6BEE1900E30FE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13F16B791E6BEE1900E30FE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13F16B7C1E6BEE1900E30FE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13F16B7E1E6BEE1900E30FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F16B841E6CB91F00E30FE9 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9D69EE0653E442CECA178330 /* Pods-InstagramOnParse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramOnParse.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramOnParse/Pods-InstagramOnParse.release.xcconfig"; sourceTree = "<group>"; };
 		A9619A71B96DF341098479D7 /* Pods_InstagramOnParse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramOnParse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2DC537E5081D374DB32419 /* Pods-InstagramOnParse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramOnParse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramOnParse/Pods-InstagramOnParse.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,11 +62,11 @@
 			isa = PBXGroup;
 			children = (
 				13F16B721E6BEE1900E30FE9 /* AppDelegate.swift */,
-				13F16B741E6BEE1900E30FE9 /* ViewController.swift */,
 				13F16B761E6BEE1900E30FE9 /* Main.storyboard */,
 				13F16B791E6BEE1900E30FE9 /* Assets.xcassets */,
 				13F16B7B1E6BEE1900E30FE9 /* LaunchScreen.storyboard */,
 				13F16B7E1E6BEE1900E30FE9 /* Info.plist */,
+				13F16B841E6CB91F00E30FE9 /* LogInViewController.swift */,
 			);
 			path = InstagramOnParse;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13F16B751E6BEE1900E30FE9 /* ViewController.swift in Sources */,
+				13F16B851E6CB91F00E30FE9 /* LogInViewController.swift in Sources */,
 				13F16B731E6BEE1900E30FE9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +373,7 @@
 				13F16B831E6BEE1900E30FE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
