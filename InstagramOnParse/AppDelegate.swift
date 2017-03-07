@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(
             with: ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = "limitless-woodland-84379"
-                configuration.clientKey = "asdfrewqghjuyt"  // set to nil assuming you have not set clientKey
-                configuration.server = "https://myAppName.herokuapp.com/parse"
+//                configuration.clientKey = "nil"  // set to nil assuming you have not set clientKey
+                configuration.server = "https://limitless-woodland-84379.herokuapp.com/parse"
             })
         )
         
