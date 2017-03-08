@@ -1,0 +1,23 @@
+{
+  "name": "InstagramOnParse",
+  "scripts": {
+  },
+  "env": {
+    "MasterKey": {
+      "required": true
+    },
+    "MONGODB_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "mongolab"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
