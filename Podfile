@@ -7,4 +7,5 @@ target 'InstagramOnParse' do
 
   # Pods for InstagramOnParse
     pod 'Parse'
+    pod update
 end
