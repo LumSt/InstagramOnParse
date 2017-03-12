@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -41,6 +42,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         Post.postUserImage(image: imageView.image, withCaption: self.textField.text) { (success: Bool, error: Error?) in
             if success {
                 print("Submitted!")

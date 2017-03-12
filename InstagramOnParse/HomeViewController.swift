@@ -41,6 +41,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print("Log out error: \(error?.localizedDescription)")
             } else {
                 print("Log out!!")
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userDidLogout"), object: nil)
                 self.dismiss(animated: true, completion: nil)
             }
         }
@@ -59,7 +60,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let post = posts[indexPath.row]
         cell.post = post
-        print(post)
         
         return cell
     }
