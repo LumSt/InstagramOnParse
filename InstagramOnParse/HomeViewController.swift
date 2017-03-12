@@ -13,10 +13,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
     
+    var posts: [Post] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.estimatedRowHeight = 300
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        getPosts()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +47,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return posts.count
     }
     
     
@@ -47,7 +57,33 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeViewTableViewCell
         
+        let post = posts[indexPath.row]
+        cell.post = post
+        print(post)
+        
         return cell
+    }
+    
+    public func getPosts() {
+        // construct query
+        let query = PFQuery(className: "Post")
+        query.order(byDescending: "createAt")
+        query.includeKey("author")
+        query.limit = 20
+        
+        // fetch data asynchronously
+        query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if let posts = posts {
+                for post in posts {
+                    print("Today is \(Date())")
+                    self.posts.append(Post(object: post))
+                    self.tableView.reloadData()
+                }
+                // do something with the array of object returned by the call
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
     }
 
     /*

@@ -7,5 +7,6 @@ target 'InstagramOnParse' do
 
   # Pods for InstagramOnParse
     pod 'Parse'
-    pod update
+    pod 'ParseUI'
+    pod 'MBProgressHUD'
 end
